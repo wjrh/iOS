@@ -20,6 +20,10 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var showName: UILabel!
+    
+    @IBAction func getShowName(sender: UIButton) {
+        showName.text = "DEERP"
+    }
 }
 

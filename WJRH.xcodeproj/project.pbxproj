@@ -15,6 +15,7 @@
 		1F9DB24A1D1C650700173EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB2481D1C650700173EC7 /* LaunchScreen.storyboard */; };
 		1F9DB2551D1C650700173EC7 /* WJRHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DB2541D1C650700173EC7 /* WJRHTests.swift */; };
 		1F9DB2601D1C650700173EC7 /* WJRHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DB25F1D1C650700173EC7 /* WJRHUITests.swift */; };
+		1F9DB26E1D1C6BD400173EC7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB26D1D1C6BD400173EC7 /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1F9DB25B1D1C650700173EC7 /* WJRHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJRHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9DB25F1D1C650700173EC7 /* WJRHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WJRHUITests.swift; sourceTree = "<group>"; };
 		1F9DB2611D1C650700173EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F9DB26D1D1C6BD400173EC7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		1F9DB23C1D1C650700173EC7 /* WJRH */ = {
 			isa = PBXGroup;
 			children = (
+				1F9DB26D1D1C6BD400173EC7 /* OpenSans-Regular.ttf */,
 				1F9DB23D1D1C650700173EC7 /* AppDelegate.swift */,
 				1F9DB23F1D1C650700173EC7 /* FirstViewController.swift */,
 				1F9DB2411D1C650700173EC7 /* SecondViewController.swift */,
@@ -234,6 +237,7 @@
 			files = (
 				1F9DB24A1D1C650700173EC7 /* LaunchScreen.storyboard in Resources */,
 				1F9DB2471D1C650700173EC7 /* Assets.xcassets in Resources */,
+				1F9DB26E1D1C6BD400173EC7 /* OpenSans-Regular.ttf in Resources */,
 				1F9DB2451D1C650700173EC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
