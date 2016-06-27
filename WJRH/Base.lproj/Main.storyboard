@@ -3,16 +3,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--First-->
+        <!--Live-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="WJRH" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,53 +27,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2RR-lj-KHE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mr1-3f-WyK">
+                                <rect key="frame" x="0.0" y="12" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WJRH 104.9 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ez-ti-GRh">
-                                        <rect key="frame" x="154" y="15" width="293" height="56"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Live from Hogg Hall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-Qj-EGH">
-                                        <rect key="frame" x="209" y="79" width="183" height="28"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiP-Td-awa">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2RR-lj-KHE">
+                                                <rect key="frame" x="0.0" y="106" width="600" height="87"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="WJRH 104.9 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ez-ti-GRh">
+                                                        <rect key="frame" x="154" y="-5" width="293" height="56"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Live from Hogg Hall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-Qj-EGH">
+                                                        <rect key="frame" x="209" y="59" width="183" height="28"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="centerX" secondItem="2RR-lj-KHE" secondAttribute="centerX" id="P9p-gs-JWW"/>
+                                                    <constraint firstItem="9ez-ti-GRh" firstAttribute="centerX" secondItem="2RR-lj-KHE" secondAttribute="centerX" id="WXn-XG-Pm5"/>
+                                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="top" secondItem="9ez-ti-GRh" secondAttribute="bottom" constant="10" id="ahI-na-YVL"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlv-e6-uGo">
+                                                <rect key="frame" x="283" y="236" width="35" height="30"/>
+                                                <state key="normal" title="Mute"/>
+                                                <connections>
+                                                    <action selector="muteStream:" destination="9pv-A4-QxB" eventType="touchUpInside" id="FbI-Rt-3Bu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="2RR-lj-KHE" firstAttribute="centerY" secondItem="CiP-Td-awa" secondAttribute="centerY" id="8GZ-zC-kg7"/>
+                                            <constraint firstItem="2RR-lj-KHE" firstAttribute="centerX" secondItem="CiP-Td-awa" secondAttribute="centerX" id="Qkw-jH-cpd"/>
+                                            <constraint firstItem="hlv-e6-uGo" firstAttribute="centerX" secondItem="CiP-Td-awa" secondAttribute="centerX" id="ryW-Ga-nnc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pse-53-PaR">
+                                        <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="none" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrv-kh-8ra">
+                                                <rect key="frame" x="363" y="163" width="229" height="29"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="none" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-IB-T6X">
+                                                <rect key="frame" x="466" y="200" width="126" height="29"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="none" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntx-hb-Dso">
+                                                <rect key="frame" x="8" y="21" width="249" height="38"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="none" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-Qs-rRH">
+                                                <rect key="frame" x="8" y="67" width="249" height="21"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="nrv-kh-8ra" secondAttribute="trailing" constant="10" id="WaF-J8-FxO"/>
+                                            <constraint firstAttribute="bottom" secondItem="bLp-IB-T6X" secondAttribute="bottom" constant="60" id="aXk-f7-y8G"/>
+                                            <constraint firstItem="bLp-IB-T6X" firstAttribute="top" secondItem="nrv-kh-8ra" secondAttribute="bottom" constant="10" id="pcQ-MV-5cX"/>
+                                            <constraint firstAttribute="trailing" secondItem="bLp-IB-T6X" secondAttribute="trailing" constant="10" id="wfR-K9-Zif"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="9ez-ti-GRh" firstAttribute="top" secondItem="2RR-lj-KHE" secondAttribute="top" constant="30" id="1cV-bo-SPF"/>
-                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="centerX" secondItem="2RR-lj-KHE" secondAttribute="centerX" id="P9p-gs-JWW"/>
-                                    <constraint firstItem="9ez-ti-GRh" firstAttribute="centerX" secondItem="2RR-lj-KHE" secondAttribute="centerX" id="WXn-XG-Pm5"/>
-                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="top" secondItem="9ez-ti-GRh" secondAttribute="bottom" constant="10" id="ahI-na-YVL"/>
+                                    <constraint firstItem="Pse-53-PaR" firstAttribute="height" secondItem="CiP-Td-awa" secondAttribute="height" id="O35-Gv-2bJ"/>
+                                    <constraint firstItem="CiP-Td-awa" firstAttribute="centerX" secondItem="mr1-3f-WyK" secondAttribute="centerX" id="ZYx-zb-9XJ"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pse-53-PaR">
-                                <rect key="frame" x="0.0" y="423" width="600" height="128"/>
-                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2RR-lj-KHE" firstAttribute="top" secondItem="ZXd-lv-0s5" secondAttribute="bottom" id="Ssx-XJ-NRT"/>
-                            <constraint firstItem="ygC-0x-e7j" firstAttribute="top" secondItem="Pse-53-PaR" secondAttribute="bottom" id="aX8-Om-k3U"/>
-                            <constraint firstAttribute="trailing" secondItem="Pse-53-PaR" secondAttribute="trailing" id="ap8-3k-Hlt"/>
-                            <constraint firstItem="Pse-53-PaR" firstAttribute="top" secondItem="2RR-lj-KHE" secondAttribute="bottom" constant="10" id="fPo-kM-ct0"/>
-                            <constraint firstItem="2RR-lj-KHE" firstAttribute="leading" secondItem="G39-ms-b9C" secondAttribute="leadingMargin" id="ie4-8B-mn9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2RR-lj-KHE" secondAttribute="trailing" id="uDe-LJ-bFh"/>
-                            <constraint firstItem="Pse-53-PaR" firstAttribute="leading" secondItem="G39-ms-b9C" secondAttribute="leading" id="vle-di-jki"/>
+                            <constraint firstAttribute="trailing" secondItem="mr1-3f-WyK" secondAttribute="trailing" id="4L6-hV-RCQ"/>
+                            <constraint firstItem="mr1-3f-WyK" firstAttribute="top" secondItem="G39-ms-b9C" secondAttribute="top" id="4zR-gb-ALQ"/>
+                            <constraint firstItem="mr1-3f-WyK" firstAttribute="leading" secondItem="G39-ms-b9C" secondAttribute="leading" id="Eb5-bE-9aH"/>
+                            <constraint firstAttribute="bottom" secondItem="mr1-3f-WyK" secondAttribute="bottom" id="oeq-JD-TWR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Live" image="live" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="DHj-Qs-rRH" id="aR0-OG-bce"/>
+                        <outlet property="djNameLabel" destination="bLp-IB-T6X" id="gTL-4f-3GW"/>
+                        <outlet property="showNameLabel" destination="nrv-kh-8ra" id="Dhr-WM-pie"/>
+                        <outlet property="songNameLabel" destination="ntx-hb-Dso" id="vEQ-04-peF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Library-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="WJRH" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,16 +147,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
+                                <rect key="frame" x="195" y="279" width="210" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="215.5" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="192" y="329" width="216" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -104,7 +168,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Library" image="recorded" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,7 +195,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="live" width="30" height="30"/>
+        <image name="recorded" width="33" height="33"/>
     </resources>
 </document>
