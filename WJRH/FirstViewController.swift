@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import AVFoundation
 
 class FirstViewController: UIViewController {
@@ -14,22 +15,20 @@ class FirstViewController: UIViewController {
     private var radioPlayer = AVPlayer()
     private var playing = false
     private var loop = NSTimer()
-    private var urlSession = NSURLSession.sharedSession()
     
-    private var songName = "none"
-    private var artist = "none"
-    private var showName = "none"
-    private var djName = "none"
+    private var tealInfo: TealInfo?
     
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var showNameLabel: UILabel!
     @IBOutlet weak var djNameLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        tealInfo = appDelegate.tealInfo
         
         do {
             try AVAudioSession.sharedInstance().setCategory( AVAudioSessionCategoryPlayAndRecord, withOptions: .DefaultToSpeaker)
@@ -58,33 +57,12 @@ class FirstViewController: UIViewController {
     }
     
     func refreshLabels() {
-        songNameLabel.text = songName
-        artistLabel.text = artist
-        showNameLabel.text = showName
-        djNameLabel.text = djName
-        let request = urlSession.dataTaskWithURL(NSURL(string: "https://api.teal.cool/organizations/wjrh/latest")!) { (data, response, error) -> Void in
-            
-            do {
-                let resultAsJson = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                if let event = resultAsJson["event"]! {
-                    let eventString = String(event)
-                    if eventString == "episode-start" {
-                        self.showName = String(resultAsJson["program"]!!["name"]!!)
-                        self.djName = String(resultAsJson["program"]!!["author"]!!)
-                    }
-                    if eventString == "track-log" {
-                        self.showName = String(resultAsJson["program"]!!["name"]!!)
-                        self.djName = String(resultAsJson["program"]!!["author"]!!)
-                        
-                        self.songName = String(resultAsJson["track"]!!["title"]!!)
-                        self.artist = String(resultAsJson["track"]!!["artist"]!!)
-                    }
-                }
-            } catch {
-                print("Error loading log.")
-            }
-        }
-        request.resume()
+        songNameLabel.text = tealInfo!.currentSongName
+        artistLabel.text = tealInfo!.currentArtist
+        showNameLabel.text = tealInfo!.currentShowName
+        djNameLabel.text = tealInfo!.currentDJName
+        
+        tealInfo!.reloadCurrentMetaData()
     }
 }
 
