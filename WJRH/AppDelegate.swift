@@ -7,16 +7,20 @@
 //
 
 import UIKit
-import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var tealInfo = TealInfo()
-
+    var libraryController: LibraryController?
+    var tealInfo: TealInfo?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let tabController = self.window!.rootViewController as? UITabBarController
+        libraryController = tabController!.viewControllers![1].childViewControllers[0] as? LibraryController
+        tealInfo = TealInfo(imageLoadCallback: libraryController!.refreshTable)
+        
         return true
     }
 

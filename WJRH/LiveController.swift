@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  LiveController.swift
 //  WJRH
 //
 //  Created by Eric Weber on 6/23/16.
@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import CoreData
 import AVFoundation
 
-class FirstViewController: UIViewController {
+class LiveController: UIViewController {
     
     private var radioPlayer = AVPlayer()
     private var playing = false
-    private var loop = NSTimer()
+    private var refreshLabelTimer = NSTimer()
     
     private var tealInfo: TealInfo?
     
@@ -28,7 +27,7 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        tealInfo = appDelegate.tealInfo
+        tealInfo = appDelegate.tealInfo!
         
         do {
             try AVAudioSession.sharedInstance().setCategory( AVAudioSessionCategoryPlayAndRecord, withOptions: .DefaultToSpeaker)
@@ -38,7 +37,7 @@ class FirstViewController: UIViewController {
         } catch {
             print("Failed to open stream")
         }
-        loop = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(FirstViewController.refreshLabels), userInfo: nil, repeats: true)
+        refreshLabelTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LiveController.refreshLabels), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {

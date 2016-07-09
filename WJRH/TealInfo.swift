@@ -19,18 +19,19 @@ class TealInfo {
     
     var programs: [String: TealProgram] = [:]
     
-    init() {
+    init(imageLoadCallback: ((Void) -> Void)?) {
         reloadCurrentMetaData()
         
         let request = urlSession.dataTaskWithURL(NSURL(string: "https://api.teal.cool/organizations/wjrh/")!) { (data, response, error) -> Void in
             do {
                 let resultAsJson = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                for i in 0...resultAsJson.count - 1 {
+                for i in 0..<resultAsJson.count {
                     //print(resultAsJson[i]["name"]!!)
                     let showName = String(resultAsJson[i]["name"]!!)
+                    let showShortName = String(resultAsJson[i]["shortname"]!!)
                     let showAuthor = String(resultAsJson[i]["author"]!!)
                     let showImageUrl = String(resultAsJson[i]["image"]!!)
-                    self.programs[showName] = TealProgram(name: showName, author: showAuthor, imageURL: showImageUrl, urlSession: self.urlSession)
+                    self.programs[showName] = TealProgram(name: showName, shortName: showShortName, author: showAuthor, imageURL: showImageUrl, imageLoadCallback: imageLoadCallback, urlSession: self.urlSession)
                 }
             } catch {
                 print("Error loading log.")
@@ -52,13 +53,18 @@ class TealInfo {
                         
                         self.currentSongName = ""
                         self.currentArtist = ""
-                    }
-                    if eventString == "track-log" {
-                        self.currentShowName = String(resultAsJson["program"]!!["name"]!!)
-                        self.currentDJName = String(resultAsJson["program"]!!["author"]!!)
+                    } else if eventString == "track-log" {
+                        //self.currentShowName = String(resultAsJson["program"]!!["name"]!!)
+                        //self.currentDJName = String(resultAsJson["program"]!!["author"]!!)
                         
                         self.currentSongName = String(resultAsJson["track"]!!["title"]!!)
                         self.currentArtist = String(resultAsJson["track"]!!["artist"]!!)
+                    } else if eventString == "episode-end" {
+                        self.currentShowName = "WJRH Summer Music"
+                        self.currentDJName = "WJRH Robo DJ"
+                        
+                        self.currentSongName = ""
+                        self.currentArtist = ""
                     }
                 }
             } catch {
