@@ -11,32 +11,24 @@ import AVFoundation
 
 class LiveController: UIViewController {
     
-    private var radioPlayer = AVPlayer()
-    private var playing = false
     private var refreshLabelTimer = NSTimer()
-    
     private var tealInfo: TealInfo?
+    private var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var showNameLabel: UILabel!
     @IBOutlet weak var djNameLabel: UILabel!
+    @IBOutlet weak var muteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         tealInfo = appDelegate.tealInfo!
         
-        do {
-            try AVAudioSession.sharedInstance().setCategory( AVAudioSessionCategoryPlayAndRecord, withOptions: .DefaultToSpeaker)
-            radioPlayer = AVPlayer(URL: NSURL(string:"http://wjrh.org:8000/WJRHlow")!)
-            radioPlayer.play()
-            playing = true
-        } catch {
-            print("Failed to open stream")
-        }
+        appDelegate.playRadio()
+        
         refreshLabelTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LiveController.refreshLabels), userInfo: nil, repeats: true)
     }
     
@@ -45,13 +37,27 @@ class LiveController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func muteStream(sender: UIButton) {
-        if playing {
-            radioPlayer.volume = 0.0
-            playing = false
+    override func viewDidAppear(animated: Bool) {
+        if !appDelegate.radioPlaying && !appDelegate.episodePlaying && !appDelegate.radioMuted {
+            appDelegate.playRadio()
+        }
+        if appDelegate.radioPlaying {
+            muteButton.setImage(UIImage(named: "MuteRadio.png"), forState: UIControlState.Normal)
         } else {
-            radioPlayer.volume = 1.0
-            playing = true
+            muteButton.setImage(UIImage(named: "PlayRadio.png"), forState: UIControlState.Normal)
+        }
+    }
+    
+    @IBAction func muteUnmuteRadio(sender: UIButton) {
+        if appDelegate.radioPlaying {
+            appDelegate.stopRadio()
+            appDelegate.radioMuted = true
+            muteButton.setImage(UIImage(named: "PlayRadio.png"), forState: UIControlState.Normal)
+        } else {
+            appDelegate.pauseEpisode()
+            appDelegate.playRadio()
+            appDelegate.radioMuted = false
+            muteButton.setImage(UIImage(named: "MuteRadio.png"), forState: UIControlState.Normal)
         }
     }
     

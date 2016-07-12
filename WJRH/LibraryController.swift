@@ -12,12 +12,12 @@ class LibraryController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var programTableView: UITableView!
     private let programTemplateCellIdentifier = "template"
+    private var showNames = [String]()
     
     private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     private var tealInfo: TealInfo?
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tealInfo = appDelegate.tealInfo!
         return tealInfo!.programs.count
     }
     
@@ -25,8 +25,8 @@ class LibraryController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let programCell = tableView.dequeueReusableCellWithIdentifier("programTemplate", forIndexPath: indexPath) as! ProgramTableViewCell
         
-        let showName = Array(tealInfo!.programs.keys)[indexPath.item]
-        print("making \(showName) cell")
+        let showName = showNames[indexPath.item]
+        //print("making \(showName) cell")
         programCell.tealProgram = tealInfo!.programs[showName]
         programCell.tealProgram!.loadEpisodes()
         programCell.programNameLabel.text = tealInfo!.programs[showName]?.name
@@ -44,11 +44,19 @@ class LibraryController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tealInfo = appDelegate.tealInfo!
+        showNames = Array(tealInfo!.programs.keys).sort()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if !appDelegate.radioPlaying && !appDelegate.episodePlaying && !appDelegate.radioMuted {
+            appDelegate.playRadio()
+        }
     }
     
     func refreshTable() {

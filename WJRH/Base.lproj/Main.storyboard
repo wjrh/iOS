@@ -19,6 +19,15 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -40,34 +49,58 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiP-Td-awa">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2RR-lj-KHE">
-                                                <rect key="frame" x="0.0" y="106" width="600" height="87"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xk-2d-w3K">
+                                                <rect key="frame" x="139" y="51" width="322" height="198"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="WJRH 104.9 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ez-ti-GRh">
-                                                        <rect key="frame" x="154" y="-5" width="293" height="56"/>
-                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Live from Hogg Hall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-Qj-EGH">
-                                                        <rect key="frame" x="209" y="59" width="183" height="28"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live from Hogg Hall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-Qj-EGH">
+                                                        <rect key="frame" x="70" y="20" width="183" height="28"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lafayette College Radio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aN-Bw-TYJ">
+                                                        <rect key="frame" x="52" y="93" width="218" height="28"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qp-Ds-qh0">
+                                                        <rect key="frame" x="136" y="129" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="F6L-gI-eKx"/>
+                                                            <constraint firstAttribute="width" constant="50" id="hQe-tP-IBF"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="MuteRadio.png"/>
+                                                        <connections>
+                                                            <action selector="muteUnmuteRadio:" destination="9pv-A4-QxB" eventType="touchUpInside" id="v1b-dP-8FV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WJRH 104.9 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ez-ti-GRh">
+                                                        <rect key="frame" x="20" y="43" width="282" height="55"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="centerX" secondItem="2RR-lj-KHE" secondAttribute="centerX" id="P9p-gs-JWW"/>
-                                                    <constraint firstItem="9ez-ti-GRh" firstAttribute="centerX" secondItem="2RR-lj-KHE" secondAttribute="centerX" id="WXn-XG-Pm5"/>
-                                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="top" secondItem="9ez-ti-GRh" secondAttribute="bottom" constant="10" id="ahI-na-YVL"/>
+                                                    <constraint firstItem="9Qp-Ds-qh0" firstAttribute="centerX" secondItem="0Xk-2d-w3K" secondAttribute="centerX" id="24t-ww-pM7"/>
+                                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="centerX" secondItem="0Xk-2d-w3K" secondAttribute="centerX" id="6f6-0j-oQB"/>
+                                                    <constraint firstItem="2aN-Bw-TYJ" firstAttribute="centerX" secondItem="0Xk-2d-w3K" secondAttribute="centerX" id="AzC-wB-S2I"/>
+                                                    <constraint firstItem="Js2-Qj-EGH" firstAttribute="top" secondItem="0Xk-2d-w3K" secondAttribute="top" constant="20" id="HmK-ec-g16"/>
+                                                    <constraint firstAttribute="height" constant="198" id="SgH-9V-Zod"/>
+                                                    <constraint firstAttribute="width" constant="322" id="TQg-KH-Xjt"/>
+                                                    <constraint firstItem="2aN-Bw-TYJ" firstAttribute="top" secondItem="9ez-ti-GRh" secondAttribute="bottom" constant="-5" id="YxH-S0-0Au"/>
+                                                    <constraint firstItem="9Qp-Ds-qh0" firstAttribute="top" secondItem="2aN-Bw-TYJ" secondAttribute="bottom" constant="8" id="hKg-g2-f6b"/>
+                                                    <constraint firstItem="9ez-ti-GRh" firstAttribute="top" secondItem="Js2-Qj-EGH" secondAttribute="bottom" constant="-5" id="qZF-1K-Osa"/>
+                                                    <constraint firstItem="9ez-ti-GRh" firstAttribute="centerX" secondItem="0Xk-2d-w3K" secondAttribute="centerX" id="uVQ-ad-ZH6"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="2RR-lj-KHE" firstAttribute="centerY" secondItem="CiP-Td-awa" secondAttribute="centerY" id="8GZ-zC-kg7"/>
-                                            <constraint firstItem="2RR-lj-KHE" firstAttribute="centerX" secondItem="CiP-Td-awa" secondAttribute="centerX" id="Qkw-jH-cpd"/>
+                                            <constraint firstItem="0Xk-2d-w3K" firstAttribute="centerY" secondItem="CiP-Td-awa" secondAttribute="centerY" id="YJs-OX-6cD"/>
+                                            <constraint firstItem="0Xk-2d-w3K" firstAttribute="centerX" secondItem="CiP-Td-awa" secondAttribute="centerX" id="cRf-77-ONr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pse-53-PaR">
@@ -85,15 +118,15 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ntx-hb-Dso">
-                                                <rect key="frame" x="8" y="21" width="249" height="63"/>
-                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-Qs-rRH">
+                                                <rect key="frame" x="8" y="92" width="249" height="24"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-Qs-rRH">
-                                                <rect key="frame" x="8" y="92" width="249" height="21"/>
-                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ntx-hb-Dso">
+                                                <rect key="frame" x="8" y="21" width="249" height="63"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -125,6 +158,7 @@
                     <connections>
                         <outlet property="artistLabel" destination="DHj-Qs-rRH" id="aR0-OG-bce"/>
                         <outlet property="djNameLabel" destination="bLp-IB-T6X" id="gTL-4f-3GW"/>
+                        <outlet property="muteButton" destination="9Qp-Ds-qh0" id="0Fg-xr-POg"/>
                         <outlet property="showNameLabel" destination="nrv-kh-8ra" id="Dhr-WM-pie"/>
                         <outlet property="songNameLabel" destination="ntx-hb-Dso" id="vEQ-04-peF"/>
                     </connections>
@@ -163,16 +197,16 @@
                                                         <constraint firstAttribute="height" constant="90" id="h1p-2B-b55"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-L0-Pjf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-L0-Pjf">
                                                     <rect key="frame" x="118" y="8" width="474" height="25"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="97D-gX-a0I" userLabel="Program Author Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DJ Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="97D-gX-a0I" userLabel="Program Author Label">
                                                     <rect key="frame" x="118" y="41" width="474" height="17"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -250,20 +284,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bM-vt-5tZ" userLabel="Episode Table View">
-                                <rect key="frame" x="0.0" y="0.0" width="590" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="595" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="programHeader" id="Nan-hg-Z7a" customClass="ProgramTableViewCell" customModule="WJRH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="590" height="150"/>
+                                        <rect key="frame" x="0.0" y="92" width="595" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nan-hg-Z7a" id="JD2-qH-ngf">
-                                            <rect key="frame" x="0.0" y="0.0" width="590" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="595" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-PO-jJZ">
-                                                    <rect key="frame" x="116" y="25" width="466" height="49"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-PO-jJZ">
+                                                    <rect key="frame" x="116" y="25" width="471" height="50"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="36"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rzi-A2-z6t">
@@ -273,10 +307,10 @@
                                                         <constraint firstAttribute="width" constant="100" id="dk5-Md-lBH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Zuw-bs-hdE">
-                                                    <rect key="frame" x="116" y="74" width="466" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DJ Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Zuw-bs-hdE">
+                                                    <rect key="frame" x="116" y="75" width="471" height="41"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -295,13 +329,14 @@
                                             <outlet property="programAuthorLabel" destination="Zuw-bs-hdE" id="gSf-RO-hmH"/>
                                             <outlet property="programImage" destination="Rzi-A2-z6t" id="ZQx-SX-8eu"/>
                                             <outlet property="programNameLabel" destination="hGP-PO-jJZ" id="eb1-gG-I2I"/>
+                                            <segue destination="Pis-H9-8mD" kind="show" identifier="ProgramInfoSegue" id="1ZA-S5-zNC"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeTemplate" id="nds-Wy-foS" customClass="EpisodeTableViewCell" customModule="WJRH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="242" width="590" height="150"/>
+                                        <rect key="frame" x="0.0" y="242" width="595" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nds-Wy-foS" id="Ht9-c4-kvU">
-                                            <rect key="frame" x="0.0" y="0.0" width="590" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="595" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WYR-DX-cBv">
@@ -311,16 +346,16 @@
                                                         <constraint firstAttribute="width" constant="75" id="yxa-0M-7dE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T76-ws-rl9">
-                                                    <rect key="frame" x="93" y="44" width="489" height="20"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="EA3-i9-7HA">
+                                                    <rect key="frame" x="93" y="8" width="494" height="25"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="EA3-i9-7HA">
-                                                    <rect key="frame" x="93" y="8" width="489" height="28"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T76-ws-rl9">
+                                                    <rect key="frame" x="93" y="41" width="494" height="17"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -339,6 +374,7 @@
                                             <outlet property="episodeDescriptionLabel" destination="T76-ws-rl9" id="fIG-TR-a1F"/>
                                             <outlet property="episodeImage" destination="WYR-DX-cBv" id="zNd-61-nI2"/>
                                             <outlet property="episodeNameLabel" destination="EA3-i9-7HA" id="6bW-L2-rbe"/>
+                                            <segue destination="tku-3N-dxT" kind="show" identifier="EpisodeSegue" id="7Eo-vo-W9T"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -351,10 +387,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="0bM-vt-5tZ" firstAttribute="leading" secondItem="6Rg-RK-FOH" secondAttribute="leadingMargin" constant="-20" id="2Hs-Hz-U5I"/>
                             <constraint firstAttribute="bottomMargin" secondItem="0bM-vt-5tZ" secondAttribute="bottom" id="bdj-CE-HTn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0bM-vt-5tZ" secondAttribute="trailing" constant="-10" id="o3W-U6-c4G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0bM-vt-5tZ" secondAttribute="trailing" constant="-15" id="rl7-H7-UaX"/>
                             <constraint firstItem="0bM-vt-5tZ" firstAttribute="top" secondItem="6Rg-RK-FOH" secondAttribute="topMargin" id="wtC-8N-PI5"/>
-                            <constraint firstItem="0bM-vt-5tZ" firstAttribute="leading" secondItem="6Rg-RK-FOH" secondAttribute="leadingMargin" constant="-20" id="y3K-R0-M9T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Program" id="3GS-yB-kvJ"/>
@@ -365,6 +401,185 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5Z-TT-SiD" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2363" y="360"/>
+        </scene>
+        <!--Program Info-->
+        <scene sceneID="Kxy-wi-kUo">
+            <objects>
+                <viewController id="Pis-H9-8mD" userLabel="Program Info" customClass="ProgramInfoController" customModule="WJRH" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G71-JY-9jV"/>
+                        <viewControllerLayoutGuide type="bottom" id="NMQ-Hy-XgA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZV-Jp-1SX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="i8T-2Q-Czt">
+                                <rect key="frame" x="20" y="84" width="560" height="60"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="44"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DJ Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-gM-c1a">
+                                <rect key="frame" x="20" y="152" width="560" height="33"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="yUS-I2-ACt">
+                                <rect key="frame" x="20" y="193" width="560" height="20"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="40" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hww-Aa-4FZ">
+                                <rect key="frame" x="20" y="221" width="560" height="20"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hww-Aa-4FZ" firstAttribute="top" secondItem="yUS-I2-ACt" secondAttribute="bottom" constant="8" id="6vN-fd-7TB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yUS-I2-ACt" secondAttribute="trailing" id="8Nm-Ib-c7w"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yUS-I2-ACt" secondAttribute="leading" id="8qK-vw-pFR"/>
+                            <constraint firstItem="yUS-I2-ACt" firstAttribute="top" secondItem="Ydn-gM-c1a" secondAttribute="bottom" constant="8" id="9Vb-ga-oX1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ydn-gM-c1a" secondAttribute="trailing" id="KnM-2p-235"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hww-Aa-4FZ" secondAttribute="trailing" id="QtV-AR-TS8"/>
+                            <constraint firstItem="i8T-2Q-Czt" firstAttribute="top" secondItem="G71-JY-9jV" secondAttribute="bottom" constant="20" id="VSQ-Du-7VH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i8T-2Q-Czt" secondAttribute="trailing" id="e8e-uu-DtX"/>
+                            <constraint firstItem="Ydn-gM-c1a" firstAttribute="top" secondItem="i8T-2Q-Czt" secondAttribute="bottom" constant="8" id="j0N-0V-TBh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hww-Aa-4FZ" secondAttribute="leading" id="mIG-x3-Kqw"/>
+                            <constraint firstItem="i8T-2Q-Czt" firstAttribute="leading" secondItem="VZV-Jp-1SX" secondAttribute="leadingMargin" id="tMB-Ji-bw2"/>
+                            <constraint firstItem="Ydn-gM-c1a" firstAttribute="leading" secondItem="VZV-Jp-1SX" secondAttribute="leadingMargin" id="vyM-9E-x03"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Program Info" id="AUL-2m-GL7"/>
+                    <connections>
+                        <outlet property="djNameLabel" destination="Ydn-gM-c1a" id="A01-74-TDP"/>
+                        <outlet property="programDescriptionLabel" destination="hww-Aa-4FZ" id="HqX-ql-2mJ"/>
+                        <outlet property="programNameLabel" destination="i8T-2Q-Czt" id="snU-Kg-Jma"/>
+                        <outlet property="programTimeLabel" destination="yUS-I2-ACt" id="crs-i8-6gy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ra-sw-eOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3193" y="0.0"/>
+        </scene>
+        <!--Episode-->
+        <scene sceneID="50S-yP-E1C">
+            <objects>
+                <viewController id="tku-3N-dxT" userLabel="Episode" customClass="EpisodeController" customModule="WJRH" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vna-Oy-mbF"/>
+                        <viewControllerLayoutGuide type="bottom" id="MjU-Ak-GUC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c8J-5b-KZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-c0-dxW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9s-4g-pFH">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="bOE-k0-rv4">
+                                                <rect key="frame" x="8" y="0.0" width="584" height="55"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ctw-dt-Vir">
+                                                <rect key="frame" x="8" y="55" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="935-gA-MhR"/>
+                                                    <constraint firstAttribute="height" constant="100" id="hCo-zR-lBi"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" lineBreakMode="wordWrap" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFx-UC-w7f">
+                                                <rect key="frame" x="116" y="55" width="474" height="17"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Duration" lineBreakMode="wordWrap" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWV-3n-cS4">
+                                                <rect key="frame" x="116" y="72" width="474" height="17"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSV-nZ-1vG">
+                                                <rect key="frame" x="8" y="163" width="584" height="17"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvr-gP-IUp">
+                                                <rect key="frame" x="275" y="195" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Bdc-7n-Sj7"/>
+                                                    <constraint firstAttribute="height" constant="50" id="jrM-pb-kAh"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="PlayButton.png"/>
+                                                <connections>
+                                                    <action selector="playPause:" destination="tku-3N-dxT" eventType="touchUpInside" id="2vx-h5-lw2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="600" id="05G-8R-jxa"/>
+                                            <constraint firstAttribute="trailing" secondItem="gWV-3n-cS4" secondAttribute="trailing" constant="10" id="3jY-VR-yjv"/>
+                                            <constraint firstItem="OSV-nZ-1vG" firstAttribute="leading" secondItem="u9s-4g-pFH" secondAttribute="leading" constant="8" id="5ri-f2-sRU"/>
+                                            <constraint firstItem="KFx-UC-w7f" firstAttribute="leading" secondItem="ctw-dt-Vir" secondAttribute="trailing" constant="8" id="6iY-CQ-eQR"/>
+                                            <constraint firstItem="gWV-3n-cS4" firstAttribute="leading" secondItem="ctw-dt-Vir" secondAttribute="trailing" constant="8" id="7Li-GA-1kd"/>
+                                            <constraint firstItem="bOE-k0-rv4" firstAttribute="leading" secondItem="u9s-4g-pFH" secondAttribute="leading" constant="8" id="Da8-6B-Gho"/>
+                                            <constraint firstAttribute="trailing" secondItem="bOE-k0-rv4" secondAttribute="trailing" constant="8" id="EKE-if-ZJy"/>
+                                            <constraint firstItem="OSV-nZ-1vG" firstAttribute="top" secondItem="ctw-dt-Vir" secondAttribute="bottom" constant="8" id="ERS-cJ-vlg"/>
+                                            <constraint firstItem="KFx-UC-w7f" firstAttribute="top" secondItem="bOE-k0-rv4" secondAttribute="bottom" id="ERg-GR-nfs"/>
+                                            <constraint firstAttribute="trailing" secondItem="OSV-nZ-1vG" secondAttribute="trailing" constant="8" id="Ney-8a-ndt"/>
+                                            <constraint firstAttribute="trailing" secondItem="KFx-UC-w7f" secondAttribute="trailing" constant="10" id="Ufa-ur-A3o"/>
+                                            <constraint firstItem="Dvr-gP-IUp" firstAttribute="top" secondItem="OSV-nZ-1vG" secondAttribute="bottom" constant="15" id="VK1-dn-SRi"/>
+                                            <constraint firstItem="ctw-dt-Vir" firstAttribute="leading" secondItem="u9s-4g-pFH" secondAttribute="leading" constant="8" id="bpx-6j-BHX"/>
+                                            <constraint firstItem="gWV-3n-cS4" firstAttribute="top" secondItem="KFx-UC-w7f" secondAttribute="bottom" id="cXt-6t-nZb"/>
+                                            <constraint firstItem="bOE-k0-rv4" firstAttribute="top" secondItem="u9s-4g-pFH" secondAttribute="top" id="j7x-f0-yzh"/>
+                                            <constraint firstItem="Dvr-gP-IUp" firstAttribute="centerX" secondItem="u9s-4g-pFH" secondAttribute="centerX" id="o55-VA-SEU"/>
+                                            <constraint firstItem="ctw-dt-Vir" firstAttribute="top" secondItem="bOE-k0-rv4" secondAttribute="bottom" id="yPf-Gn-Igf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="u9s-4g-pFH" firstAttribute="leading" secondItem="U5a-c0-dxW" secondAttribute="leading" id="7XN-7Q-w3j"/>
+                                    <constraint firstAttribute="trailing" secondItem="u9s-4g-pFH" secondAttribute="trailing" id="ALU-cC-0mJ"/>
+                                    <constraint firstItem="u9s-4g-pFH" firstAttribute="top" secondItem="U5a-c0-dxW" secondAttribute="top" id="BGZ-oR-flc"/>
+                                    <constraint firstAttribute="bottom" secondItem="u9s-4g-pFH" secondAttribute="bottom" id="EVa-GT-uoh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u9s-4g-pFH" firstAttribute="width" secondItem="c8J-5b-KZZ" secondAttribute="width" id="6Ac-GT-QtH"/>
+                            <constraint firstAttribute="bottom" secondItem="U5a-c0-dxW" secondAttribute="bottom" id="Phh-oV-fN0"/>
+                            <constraint firstAttribute="trailing" secondItem="U5a-c0-dxW" secondAttribute="trailing" id="b1c-lh-Ud4"/>
+                            <constraint firstItem="U5a-c0-dxW" firstAttribute="top" secondItem="c8J-5b-KZZ" secondAttribute="top" id="lrm-1K-TQK"/>
+                            <constraint firstItem="U5a-c0-dxW" firstAttribute="leading" secondItem="c8J-5b-KZZ" secondAttribute="leading" id="rCW-qU-6xA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Episode" id="54o-W9-K7t"/>
+                    <connections>
+                        <outlet property="episodeDescriptionLabel" destination="OSV-nZ-1vG" id="NWs-mf-IFO"/>
+                        <outlet property="episodeDurationLabel" destination="gWV-3n-cS4" id="GVf-dL-OaL"/>
+                        <outlet property="episodeImage" destination="ctw-dt-Vir" id="JDf-gG-lfa"/>
+                        <outlet property="episodeNameLabel" destination="bOE-k0-rv4" id="vZx-sx-Wf2"/>
+                        <outlet property="episodeReleaseLabel" destination="KFx-UC-w7f" id="4KH-mP-PsP"/>
+                        <outlet property="playPauseButton" destination="Dvr-gP-IUp" id="8SM-Xb-too"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dab-Ke-nZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3193" y="671"/>
         </scene>
         <!--Library-->
         <scene sceneID="Mso-Ad-qhH">
@@ -387,6 +602,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MuteRadio.png" width="100" height="100"/>
+        <image name="PlayButton.png" width="100" height="100"/>
         <image name="live" width="30" height="30"/>
         <image name="recorded" width="33" height="33"/>
     </resources>

@@ -10,14 +10,13 @@ import UIKit
 
 class ProgramController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     @IBOutlet weak var episodeTableView: UITableView!
     var tealProgram: TealProgram?
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tealProgram!.episodes.count + 1
     }
-    
-    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
         UITableViewCell {
@@ -40,7 +39,7 @@ class ProgramController: UIViewController, UITableViewDataSource, UITableViewDel
             
             episodeCell.tealEpisode = tealProgram!.episodes[indexPath.item - 1]
             let episodeName = episodeCell.tealEpisode!.name!
-            print(episodeName)
+            //print(episodeName)
             let episodeImage = episodeCell.tealEpisode!.image
             var episodeDescription = ""
             if let episodeDescriptionUnwrapped = episodeCell.tealEpisode!.description {
@@ -62,5 +61,23 @@ class ProgramController: UIViewController, UITableViewDataSource, UITableViewDel
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if !appDelegate.radioPlaying && !appDelegate.episodePlaying && !appDelegate.radioMuted {
+            appDelegate.playRadio()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "EpisodeSegue" , let destination = segue.destinationViewController as? EpisodeController {
+            //print(segue.destinationViewController)
+            if let episodeTableViewCellSender = sender as? EpisodeTableViewCell {
+                destination.tealEpisode = episodeTableViewCellSender.tealEpisode
+                //print(episodeTableViewCellSender.tealEpisode?.name)
+            }
+        } else if segue.identifier == "ProgramInfoSegue", let destination = segue.destinationViewController as? ProgramInfoController {
+            destination.tealProgram = tealProgram
+        }
     }
 }

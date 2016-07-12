@@ -13,11 +13,19 @@ class TealEpisode {
     var name: String?
     var description: String?
     var image: UIImage?
+    var duration: Int?
+    var audioURL: String?
+    var releaseDate: NSDate?
     private var urlSession: NSURLSession?
     
-    init(name: String, description: String, imageURL: String, imageLoadCallback: ((Void) -> Void)?, urlSession: NSURLSession, programImage: UIImage) {
+    init(name: String, description: String, duration: Int, audioURL: String, releaseDate: String, imageURL: String, imageLoadCallback: ((Void) -> Void)?, urlSession: NSURLSession, programImage: UIImage) {
         self.name = name
         self.description = description
+        self.duration = duration
+        self.audioURL = audioURL
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"
+        self.releaseDate = dateFormatter.dateFromString(releaseDate)
         self.urlSession = urlSession
         requestImage(imageURL, imageLoadCallback: imageLoadCallback, programImage: programImage)
     }

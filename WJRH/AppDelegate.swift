@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var libraryController: LibraryController?
     var tealInfo: TealInfo?
+    var radioPlaying = false
+    var radioMuted = false
+    var episodePlaying = false
+    
+    private var radioPlayer = AVPlayer(URL: NSURL(string:"http://wjrh.org:8000/WJRHlow")!)
+    private var episodePlayer = AVPlayer()
+    
+    func playRadio() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory( AVAudioSessionCategoryPlayAndRecord, withOptions: .DefaultToSpeaker)
+            radioPlayer.play()
+            radioPlaying = true
+        } catch {
+            print("Failed to open stream")
+        }
+    }
+    func stopRadio() {
+        radioPlayer.rate = 0.0
+        radioPlayer = AVPlayer(URL: NSURL(string:"http://wjrh.org:8000/WJRHlow")!)
+        radioPlaying = false
+    }
+    func loadEpisode(episodeAudioURL: String) {
+        episodePlayer = AVPlayer(URL: NSURL(string: episodeAudioURL)!)
+    }
+    func playEpisode() {
+        episodePlayer.play()
+        episodePlaying = true
+    }
+    func pauseEpisode() {
+        episodePlayer.pause()
+        episodePlaying = false
+    }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

@@ -30,8 +30,16 @@ class TealInfo {
                     let showName = String(resultAsJson[i]["name"]!!)
                     let showShortName = String(resultAsJson[i]["shortname"]!!)
                     let showAuthor = String(resultAsJson[i]["author"]!!)
+                    var showTime = ""
+                    if let showTimeFromRequest = resultAsJson[i]["scheduled_time"]! {
+                        showTime = String(showTimeFromRequest)
+                    }
+                    var showDescription = ""
+                    if let showDescriptionFromRequest = resultAsJson[i]["description"]! {
+                        showDescription = String(showDescriptionFromRequest)
+                    }
                     let showImageUrl = String(resultAsJson[i]["image"]!!)
-                    self.programs[showName] = TealProgram(name: showName, shortName: showShortName, author: showAuthor, imageURL: showImageUrl, imageLoadCallback: imageLoadCallback, urlSession: self.urlSession)
+                    self.programs[showName] = TealProgram(name: showName, shortName: showShortName, author: showAuthor, time: showTime, description: showDescription, imageURL: showImageUrl, imageLoadCallback: imageLoadCallback, urlSession: self.urlSession)
                 }
             } catch {
                 print("Error loading log.")

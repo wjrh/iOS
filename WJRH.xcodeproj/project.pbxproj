@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1970B81D30DA9700508C3E /* EpisodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1970B71D30DA9700508C3E /* EpisodeController.swift */; };
+		1F1970BA1D32FC9E00508C3E /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1970B91D32FC9E00508C3E /* PlayButton.png */; };
 		1F288AF31D22E6E3004DFAB4 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F288AF21D22E6E3004DFAB4 /* ProgramTableViewCell.swift */; };
 		1F288AF51D2326DE004DFAB4 /* TealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F288AF41D2326DE004DFAB4 /* TealInfo.swift */; };
 		1F490B011D278A40004BB4C7 /* TealEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F490B001D278A40004BB4C7 /* TealEpisode.swift */; };
@@ -23,6 +25,10 @@
 		1FB7E7101D25C8D800666D9C /* TealProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7E70F1D25C8D800666D9C /* TealProgram.swift */; };
 		1FB7E7131D27028600666D9C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7E7121D27028600666D9C /* placeholder.png */; };
 		1FB7E7151D2741BC00666D9C /* ProgramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7E7141D2741BC00666D9C /* ProgramController.swift */; };
+		1FEF7AD51D342CA60023A74A /* PauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD41D342CA60023A74A /* PauseButton.png */; };
+		1FEF7AD81D34396B0023A74A /* MuteRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD61D34396B0023A74A /* MuteRadio.png */; };
+		1FEF7AD91D34396B0023A74A /* PlayRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD71D34396B0023A74A /* PlayRadio.png */; };
+		1FEF7ADB1D3449360023A74A /* ProgramInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF7ADA1D3449360023A74A /* ProgramInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1970B71D30DA9700508C3E /* EpisodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeController.swift; sourceTree = "<group>"; };
+		1F1970B91D32FC9E00508C3E /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
 		1F288AF21D22E6E3004DFAB4 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		1F288AF41D2326DE004DFAB4 /* TealInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TealInfo.swift; sourceTree = "<group>"; };
 		1F490B001D278A40004BB4C7 /* TealEpisode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TealEpisode.swift; sourceTree = "<group>"; };
@@ -65,6 +73,10 @@
 		1FB7E70F1D25C8D800666D9C /* TealProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TealProgram.swift; sourceTree = "<group>"; };
 		1FB7E7121D27028600666D9C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		1FB7E7141D2741BC00666D9C /* ProgramController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramController.swift; sourceTree = "<group>"; };
+		1FEF7AD41D342CA60023A74A /* PauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton.png; sourceTree = "<group>"; };
+		1FEF7AD61D34396B0023A74A /* MuteRadio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MuteRadio.png; sourceTree = "<group>"; };
+		1FEF7AD71D34396B0023A74A /* PlayRadio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayRadio.png; sourceTree = "<group>"; };
+		1FEF7ADA1D3449360023A74A /* ProgramInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,8 @@
 				1F9DB2411D1C650700173EC7 /* LibraryController.swift */,
 				1FB7E7141D2741BC00666D9C /* ProgramController.swift */,
 				1FA87AE81D29DC00009C64EE /* EpisodeTableViewCell.swift */,
+				1F1970B71D30DA9700508C3E /* EpisodeController.swift */,
+				1FEF7ADA1D3449360023A74A /* ProgramInfoController.swift */,
 				1F9DB2431D1C650700173EC7 /* Main.storyboard */,
 				1F288AF41D2326DE004DFAB4 /* TealInfo.swift */,
 				1FB7E70F1D25C8D800666D9C /* TealProgram.swift */,
@@ -130,6 +144,10 @@
 				1F9DB2481D1C650700173EC7 /* LaunchScreen.storyboard */,
 				1F9DB24B1D1C650700173EC7 /* Info.plist */,
 				1FB7E7121D27028600666D9C /* placeholder.png */,
+				1F1970B91D32FC9E00508C3E /* PlayButton.png */,
+				1FEF7AD41D342CA60023A74A /* PauseButton.png */,
+				1FEF7AD61D34396B0023A74A /* MuteRadio.png */,
+				1FEF7AD71D34396B0023A74A /* PlayRadio.png */,
 			);
 			path = WJRH;
 			sourceTree = "<group>";
@@ -258,10 +276,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9DB24A1D1C650700173EC7 /* LaunchScreen.storyboard in Resources */,
+				1F1970BA1D32FC9E00508C3E /* PlayButton.png in Resources */,
+				1FEF7AD81D34396B0023A74A /* MuteRadio.png in Resources */,
+				1FEF7AD91D34396B0023A74A /* PlayRadio.png in Resources */,
 				1F9DB2471D1C650700173EC7 /* Assets.xcassets in Resources */,
 				1F9DB26E1D1C6BD400173EC7 /* OpenSans-Regular.ttf in Resources */,
 				1FB7E7131D27028600666D9C /* placeholder.png in Resources */,
 				1F9DB2451D1C650700173EC7 /* Main.storyboard in Resources */,
+				1FEF7AD51D342CA60023A74A /* PauseButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA87AE91D29DC00009C64EE /* EpisodeTableViewCell.swift in Sources */,
+				1F1970B81D30DA9700508C3E /* EpisodeController.swift in Sources */,
 				1F9DB2421D1C650700173EC7 /* LibraryController.swift in Sources */,
 				1F288AF31D22E6E3004DFAB4 /* ProgramTableViewCell.swift in Sources */,
 				1FB7E7101D25C8D800666D9C /* TealProgram.swift in Sources */,
 				1F490B011D278A40004BB4C7 /* TealEpisode.swift in Sources */,
+				1FEF7ADB1D3449360023A74A /* ProgramInfoController.swift in Sources */,
 				1F9DB23E1D1C650700173EC7 /* AppDelegate.swift in Sources */,
 				1F9DB2401D1C650700173EC7 /* LiveController.swift in Sources */,
 				1F288AF51D2326DE004DFAB4 /* TealInfo.swift in Sources */,

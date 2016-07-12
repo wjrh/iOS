@@ -13,15 +13,19 @@ class TealProgram {
     var name: String?
     var shortName: String?
     var author: String?
+    var time: String?
+    var description: String?
     var image: UIImage?
     var episodes: [TealEpisode] = []
     var episodesLoaded = false
     private var urlSession: NSURLSession?
     
-    init(name: String, shortName: String, author: String, imageURL: String, imageLoadCallback: ((Void) -> Void)?, urlSession: NSURLSession) {
+    init(name: String, shortName: String, author: String, time: String, description: String, imageURL: String, imageLoadCallback: ((Void) -> Void)?, urlSession: NSURLSession) {
         self.name = name
         self.shortName = shortName
         self.author = author
+        self.time = time
+        self.description = description
         self.urlSession = urlSession
         requestImage(imageURL, imageLoadCallback: imageLoadCallback)
     }
@@ -66,12 +70,31 @@ class TealProgram {
                             if let episodeDescriptionFromRequest = jsonEpisodes[i]["description"]!! as? String {
                                 episodeDescription = episodeDescriptionFromRequest
                             }
+                            var episodeDuration = 0
+                            if let episodeDurationFromRequest = jsonEpisodes[i]["length"]!! as? String {
+                                episodeDuration = Int(episodeDurationFromRequest)!
+                            }
+                            var episodeAudioURL = ""
+                            if let episodeAudioURLFromRequest = jsonEpisodes[i]["audio_url"]!! as? String {
+                                episodeAudioURL = episodeAudioURLFromRequest
+                            }
+                            var episodeReleaseDate = ""
+                            if let episodeReleaseDateFromRequest = jsonEpisodes[i]["pubdate"]!! as? String {
+                                episodeReleaseDate = episodeReleaseDateFromRequest
+                            }
                             var episodeImageURL = "<null>"
                             if let episodeImageURLFromRequest = jsonEpisodes[i]["image"]!! as? String {
                                 episodeImageURL = episodeImageURLFromRequest
                             }
-                            let episode = TealEpisode(name: episodeName, description: episodeDescription, imageURL: episodeImageURL, imageLoadCallback: {}, urlSession: self.urlSession!, programImage: self.image!)
+                            let episode = TealEpisode(name: episodeName, description: episodeDescription, duration: episodeDuration, audioURL: episodeAudioURL, releaseDate: episodeReleaseDate, imageURL: episodeImageURL, imageLoadCallback: {}, urlSession: self.urlSession!, programImage: self.image!)
                             self.episodes.append(episode)
+                        }
+                    }
+                    self.episodes = self.episodes.sort() { (firstEpisode, secondEpisode) -> Bool in
+                        if firstEpisode.releaseDate!.compare(secondEpisode.releaseDate!) == NSComparisonResult.OrderedDescending {
+                            return true
+                        } else {
+                            return false
                         }
                     }
                     //print(resultAsJson)
