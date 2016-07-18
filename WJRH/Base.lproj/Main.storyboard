@@ -53,19 +53,19 @@
                                                 <rect key="frame" x="139" y="51" width="322" height="198"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live from Hogg Hall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-Qj-EGH">
-                                                        <rect key="frame" x="70" y="20" width="183" height="28"/>
-                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                        <rect key="frame" x="88" y="20" width="146" height="22"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lafayette College Radio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aN-Bw-TYJ">
-                                                        <rect key="frame" x="52" y="93" width="218" height="28"/>
-                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                                        <rect key="frame" x="74" y="87" width="174" height="22"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qp-Ds-qh0">
-                                                        <rect key="frame" x="136" y="129" width="50" height="50"/>
+                                                        <rect key="frame" x="136" y="117" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="F6L-gI-eKx"/>
                                                             <constraint firstAttribute="width" constant="50" id="hQe-tP-IBF"/>
@@ -76,7 +76,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WJRH 104.9 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ez-ti-GRh">
-                                                        <rect key="frame" x="20" y="43" width="282" height="55"/>
+                                                        <rect key="frame" x="20" y="37" width="282" height="55"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -96,47 +96,68 @@
                                                     <constraint firstItem="9ez-ti-GRh" firstAttribute="centerX" secondItem="0Xk-2d-w3K" secondAttribute="centerX" id="uVQ-ad-ZH6"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbp-YZ-W9L">
+                                                <rect key="frame" x="278" y="214" width="45" height="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="14" id="4hf-Us-zZ2"/>
+                                                    <constraint firstAttribute="width" constant="45" id="ffL-gy-1eo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="fbp-YZ-W9L" firstAttribute="top" secondItem="9Qp-Ds-qh0" secondAttribute="bottom" constant="-4" id="Dfp-O1-nXC"/>
                                             <constraint firstItem="0Xk-2d-w3K" firstAttribute="centerY" secondItem="CiP-Td-awa" secondAttribute="centerY" id="YJs-OX-6cD"/>
                                             <constraint firstItem="0Xk-2d-w3K" firstAttribute="centerX" secondItem="CiP-Td-awa" secondAttribute="centerX" id="cRf-77-ONr"/>
+                                            <constraint firstItem="fbp-YZ-W9L" firstAttribute="centerX" secondItem="CiP-Td-awa" secondAttribute="centerX" id="px8-46-la3"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pse-53-PaR">
                                         <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrv-kh-8ra">
-                                                <rect key="frame" x="363" y="163" width="229" height="29"/>
-                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrv-kh-8ra">
+                                                <rect key="frame" x="8" y="52" width="584" height="22"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-IB-T6X">
-                                                <rect key="frame" x="466" y="200" width="126" height="29"/>
-                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-Qs-rRH">
+                                                <rect key="frame" x="8" y="30" width="584" height="22"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-Qs-rRH">
-                                                <rect key="frame" x="8" y="92" width="249" height="24"/>
-                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ntx-hb-Dso">
+                                                <rect key="frame" x="8" y="8" width="584" height="22"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ntx-hb-Dso">
-                                                <rect key="frame" x="8" y="21" width="249" height="63"/>
-                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-IB-T6X">
+                                                <rect key="frame" x="8" y="74" width="584" height="22"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="nrv-kh-8ra" secondAttribute="trailing" constant="10" id="WaF-J8-FxO"/>
-                                            <constraint firstAttribute="bottom" secondItem="bLp-IB-T6X" secondAttribute="bottom" constant="60" id="aXk-f7-y8G"/>
-                                            <constraint firstItem="bLp-IB-T6X" firstAttribute="top" secondItem="nrv-kh-8ra" secondAttribute="bottom" constant="10" id="pcQ-MV-5cX"/>
-                                            <constraint firstAttribute="trailing" secondItem="bLp-IB-T6X" secondAttribute="trailing" constant="10" id="wfR-K9-Zif"/>
+                                            <constraint firstItem="bLp-IB-T6X" firstAttribute="leading" secondItem="Pse-53-PaR" secondAttribute="leading" constant="8" id="2lg-Tz-EiD"/>
+                                            <constraint firstAttribute="trailing" secondItem="ntx-hb-Dso" secondAttribute="trailing" constant="8" id="3qH-JC-t4R"/>
+                                            <constraint firstItem="nrv-kh-8ra" firstAttribute="leading" secondItem="Pse-53-PaR" secondAttribute="leading" constant="8" id="D6g-Ru-7yQ"/>
+                                            <constraint firstItem="ntx-hb-Dso" firstAttribute="top" secondItem="Pse-53-PaR" secondAttribute="top" constant="8" id="KT4-I3-naJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="DHj-Qs-rRH" secondAttribute="trailing" constant="8" id="O4i-UW-DYu"/>
+                                            <constraint firstItem="nrv-kh-8ra" firstAttribute="top" secondItem="DHj-Qs-rRH" secondAttribute="bottom" id="OGb-bG-Tc4"/>
+                                            <constraint firstAttribute="trailing" secondItem="nrv-kh-8ra" secondAttribute="trailing" constant="8" id="TpS-hT-7w1"/>
+                                            <constraint firstAttribute="trailing" secondItem="bLp-IB-T6X" secondAttribute="trailing" constant="8" id="VZG-Se-Q3S"/>
+                                            <constraint firstItem="DHj-Qs-rRH" firstAttribute="leading" secondItem="Pse-53-PaR" secondAttribute="leading" constant="8" id="gQD-Ob-Sbd"/>
+                                            <constraint firstItem="bLp-IB-T6X" firstAttribute="top" secondItem="nrv-kh-8ra" secondAttribute="bottom" id="mIm-WK-wz7"/>
+                                            <constraint firstItem="ntx-hb-Dso" firstAttribute="centerX" secondItem="Pse-53-PaR" secondAttribute="centerX" id="sCj-PZ-jlq"/>
+                                            <constraint firstItem="ntx-hb-Dso" firstAttribute="leading" secondItem="Pse-53-PaR" secondAttribute="leading" constant="8" id="wLe-bX-7RJ"/>
+                                            <constraint firstItem="DHj-Qs-rRH" firstAttribute="top" secondItem="ntx-hb-Dso" secondAttribute="bottom" id="wVj-uw-Sv8"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -159,6 +180,8 @@
                         <outlet property="artistLabel" destination="DHj-Qs-rRH" id="aR0-OG-bce"/>
                         <outlet property="djNameLabel" destination="bLp-IB-T6X" id="gTL-4f-3GW"/>
                         <outlet property="muteButton" destination="9Qp-Ds-qh0" id="0Fg-xr-POg"/>
+                        <outlet property="muteLabel" destination="fbp-YZ-W9L" id="OhB-1g-s3C"/>
+                        <outlet property="muteView" destination="CiP-Td-awa" id="eiQ-OV-3R7"/>
                         <outlet property="showNameLabel" destination="nrv-kh-8ra" id="Dhr-WM-pie"/>
                         <outlet property="songNameLabel" destination="ntx-hb-Dso" id="vEQ-04-peF"/>
                     </connections>

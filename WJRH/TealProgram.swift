@@ -58,7 +58,7 @@ class TealProgram {
         }
     }
     
-    func loadEpisodes() {
+    func loadEpisodes(imageLoadCallback: ((Void) -> Void)?) {
         if !episodesLoaded {
             let request = urlSession!.dataTaskWithURL(NSURL(string: "https://api.teal.cool/programs/\(shortName!)")!) { (data, response, error) -> Void in
                 do {
@@ -86,7 +86,7 @@ class TealProgram {
                             if let episodeImageURLFromRequest = jsonEpisodes[i]["image"]!! as? String {
                                 episodeImageURL = episodeImageURLFromRequest
                             }
-                            let episode = TealEpisode(name: episodeName, description: episodeDescription, duration: episodeDuration, audioURL: episodeAudioURL, releaseDate: episodeReleaseDate, imageURL: episodeImageURL, imageLoadCallback: {}, urlSession: self.urlSession!, programImage: self.image!)
+                            let episode = TealEpisode(name: episodeName, description: episodeDescription, duration: episodeDuration, audioURL: episodeAudioURL, releaseDate: episodeReleaseDate, imageURL: episodeImageURL, imageLoadCallback: imageLoadCallback, urlSession: self.urlSession!, programImage: self.image!)
                             self.episodes.append(episode)
                         }
                     }

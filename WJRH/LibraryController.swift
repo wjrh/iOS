@@ -18,6 +18,9 @@ class LibraryController: UIViewController, UITableViewDataSource, UITableViewDel
     private var tealInfo: TealInfo?
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tealInfo = appDelegate.tealInfo!
+        showNames = Array(tealInfo!.programs.keys).sort()
+        //print(tealInfo!.programs.count)
         return tealInfo!.programs.count
     }
     
@@ -28,7 +31,6 @@ class LibraryController: UIViewController, UITableViewDataSource, UITableViewDel
         let showName = showNames[indexPath.item]
         //print("making \(showName) cell")
         programCell.tealProgram = tealInfo!.programs[showName]
-        programCell.tealProgram!.loadEpisodes()
         programCell.programNameLabel.text = tealInfo!.programs[showName]?.name
         if (tealInfo!.programs[showName]?.author != "<null>") {
             programCell.programAuthorLabel.text = tealInfo!.programs[showName]?.author
@@ -38,14 +40,16 @@ class LibraryController: UIViewController, UITableViewDataSource, UITableViewDel
         programCell.programImage.contentMode = .ScaleAspectFit
         programCell.programImage.image = tealInfo!.programs[showName]?.image
         
+        programCell.tealProgram!.loadEpisodes( { self.appDelegate.reloadEpisodeTable() } )
+        
         return programCell
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tealInfo = appDelegate.tealInfo!
-        showNames = Array(tealInfo!.programs.keys).sort()
+        
+        appDelegate.programTable = programTableView
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,11 +63,13 @@ class LibraryController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
-    func refreshTable() {
+    /*func refreshLibraryTable() {
         if let table = self.programTableView {
-            table.reloadData()
+            dispatch_async(dispatch_get_main_queue(), {
+                table.reloadSections(NSIndexSet(index: 0) , withRowAnimation: .Automatic)
+            })
         }
-    }
+    }*/
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ProgramSegue" , let destination = segue.destinationViewController as? ProgramController {

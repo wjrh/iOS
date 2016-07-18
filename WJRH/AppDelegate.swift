@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var radioMuted = false
     var episodePlaying = false
     
+    var programTable: UITableView?
+    var episodeTable: UITableView?
+    
     private var radioPlayer = AVPlayer(URL: NSURL(string:"http://wjrh.org:8000/WJRHlow")!)
     private var episodePlayer = AVPlayer()
     
@@ -48,11 +51,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         episodePlaying = false
     }
     
+    func reloadProgramTable() {
+        if let programTableUnwrapped = programTable {
+            dispatch_async(dispatch_get_main_queue(), {
+                programTableUnwrapped.reloadSections(NSIndexSet(index: 0) , withRowAnimation: .Automatic)
+            })
+        }
+    }
+    func reloadEpisodeTable() {
+        if let episodeTableUnwrapped = episodeTable {
+            dispatch_async(dispatch_get_main_queue(), {
+                episodeTableUnwrapped.reloadSections(NSIndexSet(index: 0) , withRowAnimation: .Automatic)
+            })
+        }
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let tabController = self.window!.rootViewController as? UITabBarController
         libraryController = tabController!.viewControllers![1].childViewControllers[0] as? LibraryController
-        tealInfo = TealInfo(imageLoadCallback: libraryController!.refreshTable)
+        tealInfo = TealInfo(imageLoadCallback: reloadProgramTable)//libraryController!.refreshLibraryTable)
         
         return true
     }

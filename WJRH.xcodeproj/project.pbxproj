@@ -26,8 +26,8 @@
 		1FB7E7131D27028600666D9C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7E7121D27028600666D9C /* placeholder.png */; };
 		1FB7E7151D2741BC00666D9C /* ProgramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7E7141D2741BC00666D9C /* ProgramController.swift */; };
 		1FEF7AD51D342CA60023A74A /* PauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD41D342CA60023A74A /* PauseButton.png */; };
-		1FEF7AD81D34396B0023A74A /* MuteRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD61D34396B0023A74A /* MuteRadio.png */; };
-		1FEF7AD91D34396B0023A74A /* PlayRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD71D34396B0023A74A /* PlayRadio.png */; };
+		1FEF7AD81D34396B0023A74A /* PlayRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD61D34396B0023A74A /* PlayRadio.png */; };
+		1FEF7AD91D34396B0023A74A /* MuteRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF7AD71D34396B0023A74A /* MuteRadio.png */; };
 		1FEF7ADB1D3449360023A74A /* ProgramInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF7ADA1D3449360023A74A /* ProgramInfoController.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +74,8 @@
 		1FB7E7121D27028600666D9C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		1FB7E7141D2741BC00666D9C /* ProgramController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramController.swift; sourceTree = "<group>"; };
 		1FEF7AD41D342CA60023A74A /* PauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton.png; sourceTree = "<group>"; };
-		1FEF7AD61D34396B0023A74A /* MuteRadio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MuteRadio.png; sourceTree = "<group>"; };
-		1FEF7AD71D34396B0023A74A /* PlayRadio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayRadio.png; sourceTree = "<group>"; };
+		1FEF7AD61D34396B0023A74A /* PlayRadio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayRadio.png; sourceTree = "<group>"; };
+		1FEF7AD71D34396B0023A74A /* MuteRadio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MuteRadio.png; sourceTree = "<group>"; };
 		1FEF7ADA1D3449360023A74A /* ProgramInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,8 +146,8 @@
 				1FB7E7121D27028600666D9C /* placeholder.png */,
 				1F1970B91D32FC9E00508C3E /* PlayButton.png */,
 				1FEF7AD41D342CA60023A74A /* PauseButton.png */,
-				1FEF7AD61D34396B0023A74A /* MuteRadio.png */,
-				1FEF7AD71D34396B0023A74A /* PlayRadio.png */,
+				1FEF7AD61D34396B0023A74A /* PlayRadio.png */,
+				1FEF7AD71D34396B0023A74A /* MuteRadio.png */,
 			);
 			path = WJRH;
 			sourceTree = "<group>";
@@ -277,8 +277,8 @@
 			files = (
 				1F9DB24A1D1C650700173EC7 /* LaunchScreen.storyboard in Resources */,
 				1F1970BA1D32FC9E00508C3E /* PlayButton.png in Resources */,
-				1FEF7AD81D34396B0023A74A /* MuteRadio.png in Resources */,
-				1FEF7AD91D34396B0023A74A /* PlayRadio.png in Resources */,
+				1FEF7AD81D34396B0023A74A /* PlayRadio.png in Resources */,
+				1FEF7AD91D34396B0023A74A /* MuteRadio.png in Resources */,
 				1F9DB2471D1C650700173EC7 /* Assets.xcassets in Resources */,
 				1F9DB26E1D1C6BD400173EC7 /* OpenSans-Regular.ttf in Resources */,
 				1FB7E7131D27028600666D9C /* placeholder.png in Resources */,

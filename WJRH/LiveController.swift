@@ -20,14 +20,17 @@ class LiveController: UIViewController {
     @IBOutlet weak var showNameLabel: UILabel!
     @IBOutlet weak var djNameLabel: UILabel!
     @IBOutlet weak var muteButton: UIButton!
+    @IBOutlet weak var muteLabel: UILabel!
+    @IBOutlet weak var muteView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         tealInfo = appDelegate.tealInfo!
-        
         appDelegate.playRadio()
+        let muteTouch = UITapGestureRecognizer(target: self, action: #selector(LiveController.muteUnmuteRadio(_:)))
+        muteView.addGestureRecognizer(muteTouch)
         
         refreshLabelTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LiveController.refreshLabels), userInfo: nil, repeats: true)
     }
@@ -43,8 +46,10 @@ class LiveController: UIViewController {
         }
         if appDelegate.radioPlaying {
             muteButton.setImage(UIImage(named: "MuteRadio.png"), forState: UIControlState.Normal)
+            muteLabel.text = "Mute"
         } else {
             muteButton.setImage(UIImage(named: "PlayRadio.png"), forState: UIControlState.Normal)
+            muteLabel.text = "Unmute"
         }
     }
     
@@ -53,19 +58,34 @@ class LiveController: UIViewController {
             appDelegate.stopRadio()
             appDelegate.radioMuted = true
             muteButton.setImage(UIImage(named: "PlayRadio.png"), forState: UIControlState.Normal)
+            muteLabel.text = "Unmute"
         } else {
             appDelegate.pauseEpisode()
             appDelegate.playRadio()
             appDelegate.radioMuted = false
             muteButton.setImage(UIImage(named: "MuteRadio.png"), forState: UIControlState.Normal)
+            muteLabel.text = "Mute"
         }
     }
     
     func refreshLabels() {
+        
         songNameLabel.text = tealInfo!.currentSongName
-        artistLabel.text = tealInfo!.currentArtist
-        showNameLabel.text = tealInfo!.currentShowName
-        djNameLabel.text = tealInfo!.currentDJName
+        if tealInfo!.currentArtist != "" {
+            artistLabel.text = "By \(tealInfo!.currentArtist)"
+        } else {
+            artistLabel.text = ""
+        }
+        if tealInfo!.currentShowName != "" {
+            showNameLabel.text = "From \(tealInfo!.currentShowName)"
+        } else {
+            showNameLabel.text = ""
+        }
+        if tealInfo!.currentDJName != "" {
+            djNameLabel.text = "With \(tealInfo!.currentDJName)"
+        } else {
+            djNameLabel.text = ""
+        }
         
         tealInfo!.reloadCurrentMetaData()
     }

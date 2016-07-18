@@ -56,6 +56,8 @@ class ProgramController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        appDelegate.episodeTable = episodeTableView
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,6 +68,12 @@ class ProgramController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidAppear(animated: Bool) {
         if !appDelegate.radioPlaying && !appDelegate.episodePlaying && !appDelegate.radioMuted {
             appDelegate.playRadio()
+        }
+    }
+    
+    func refreshProgramTable() {
+        if let table = self.episodeTableView {
+            table.reloadData()
         }
     }
     
