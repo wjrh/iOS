@@ -43,7 +43,9 @@ class ProgramController: UIViewController, UITableViewDataSource, UITableViewDel
             let episodeImage = episodeCell.tealEpisode!.image
             var episodeDescription = ""
             if let episodeDescriptionUnwrapped = episodeCell.tealEpisode!.description {
-                episodeDescription = episodeDescriptionUnwrapped
+                if episodeDescriptionUnwrapped != "<null>" {
+                    episodeDescription = episodeDescriptionUnwrapped
+                }
             }
             episodeCell.episodeNameLabel.text = episodeName
             episodeCell.episodeImage.image = episodeImage

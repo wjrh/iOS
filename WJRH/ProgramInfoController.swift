@@ -21,9 +21,19 @@ class ProgramInfoController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         if let tealProgramUnwrapped = tealProgram {
             programNameLabel.text = tealProgramUnwrapped.name
-            djNameLabel.text = tealProgramUnwrapped.author
+            if tealProgramUnwrapped.author != "<null>" {
+                djNameLabel.text = tealProgramUnwrapped.author
+            }
+            else {
+                djNameLabel.text = ""
+            }
             programTimeLabel.text = tealProgramUnwrapped.time
-            programDescriptionLabel.text = tealProgramUnwrapped.description
+            if tealProgramUnwrapped.description != "<null>" {
+                programDescriptionLabel.text = tealProgramUnwrapped.description
+            }
+            else {
+                programDescriptionLabel.text = ""
+            }
         }
     }
     override func didReceiveMemoryWarning() {

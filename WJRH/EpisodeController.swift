@@ -25,7 +25,12 @@ class EpisodeController: UIViewController {
         if let tealEpisodeUnwrapped = tealEpisode {
             episodeNameLabel.text = tealEpisodeUnwrapped.name!
             episodeImage.image = tealEpisodeUnwrapped.image
-            episodeDescriptionLabel.text = tealEpisodeUnwrapped.description
+            if tealEpisodeUnwrapped.description != "<null>" {
+                episodeDescriptionLabel.text = tealEpisodeUnwrapped.description
+            }
+            else {
+                episodeDescriptionLabel.text = "";
+            }
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
             episodeReleaseLabel.text = "Released on \(dateFormatter.stringFromDate(tealEpisodeUnwrapped.releaseDate!))"
